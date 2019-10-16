@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="145px" height="114px" viewBox="0 0 145 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group 13</title>
+    <desc>Created with Sketch.</desc>
+    <g id="092619" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Pramana-HP-092619-ForDev" transform="translate(-140.000000, -829.000000)">
+            <g id="Section2" transform="translate(0.000000, 770.000000)">
+                <g id="Group-3" transform="translate(140.000000, 60.000000)">
+                    <g id="Group-13">
+                        <g id="Group-10-Copy" transform="translate(72.000000, 8.500000) scale(-1, 1) rotate(90.000000) translate(-72.000000, -8.500000) translate(63.500000, -63.000000)">
+                            <g id="Group-119-Copy" transform="translate(8.000000, 63.000000) scale(-1, 1) rotate(90.000000) translate(-8.000000, -63.000000) translate(-55.000000, 57.000000)">
+                                <g id="Group-113" transform="translate(63.000000, 6.000000) scale(-1, 1) translate(-63.000000, -6.000000) ">
+                                    <g id="Stacked-Group" transform="translate(0.000000, 3.791005)" fill="#092290">
+                                        <circle id="Oval" opacity="0.100000001" cx="2.5" cy="2.5" r="2.5"></circle>
+                                        <circle id="Oval" cx="120" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.900000036" cx="107" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.800000012" cx="94" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.699999988" cx="81" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.600000024" cx="68" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.5" cx="55" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.400000006" cx="42" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.300000012" cx="29" cy="2" r="2"></circle>
+                                        <circle id="Oval" opacity="0.200000003" cx="16" cy="2" r="2"></circle>
+                                    </g>
+                                    <circle id="Oval" fill="#FEF300" cx="120" cy="6" r="6"></circle>
+                                </g>
+                            </g>
+                            <polyline id="Path" stroke="#092290" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(8.485281, 134.485281) rotate(45.000000) translate(-8.485281, -134.485281) " points="14.4565044 128.485281 14.4852814 140.485281 2.48528137 140.456504"></polyline>
+                        </g>
+                        <g id="Group-12" transform="translate(6.500000, 65.500000) rotate(90.000000) translate(-6.500000, -65.500000) translate(-41.000000, 63.500000)" fill="#092290">
+                            <circle id="Oval" opacity="0.100000001" cx="93" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.200000003" cx="80" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.300000012" cx="67" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.400000006" cx="54" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.5" cx="41" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.600000024" cx="28" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.699999988" cx="15" cy="2" r="2"></circle>
+                            <circle id="Oval" opacity="0.800000012" cx="2" cy="2" r="2"></circle>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

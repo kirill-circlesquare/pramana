@@ -1,0 +1,40 @@
+footer
+  padding-bottom: 30px
+  //@media(max-width: 768px)
+  //  padding-bottom: 80px
+
+.footer
+  &_links
+    //margin-bottom: 32px
+    @media(max-width: 768px)
+      margin-bottom: 50px
+    .f-link
+      @media(max-width: 768px)
+        display: block
+        margin-bottom: 17px
+    a
+      font-family: $cutiveMono
+      font-size: 14px
+      line-height: 24px
+      letter-spacing: 0.404444px
+      text-transform: uppercase
+      display: inline-block
+      color: $main
+      text-decoration: none
+      transition: color 300ms ease-out
+      &:hover
+        color: $blue
+
+.copyright-text
+  display: inline-block
+  padding-left: 50px
+  font-family: $cutiveMono
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.404444px
+  text-transform: uppercase
+  color: $main
+  @media(max-width: 768px)
+    padding-left: 0
+    text-align: center
+    display: block

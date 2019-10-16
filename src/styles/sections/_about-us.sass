@@ -1,0 +1,48 @@
+.about-us
+  padding: 60px 0
+  &, .container .row
+    @extend .screen-height
+  @media(max-width: 768px)
+    padding: 60px 0
+
+  .h-title, .p-text
+    color: $main
+    text-align: center
+
+  &_info
+    padding: 170px 0 195px
+    @media(max-width: 992px)
+      padding: 0 0 40px
+
+  .p-text
+    font-family: $roboto
+    font-weight: $lt
+    font-size: 26px
+    line-height: 38px
+    @media(max-width: 768px)
+      font-size: 18px
+      line-height: 28px
+
+.bg-arrows
+  &_wrap
+    position: relative
+  .bg-arrow
+    &_top, &_bottom
+      position: absolute
+      img
+        display: inline-block
+
+    &_top
+      left: 0
+      top: 60px
+      @media(max-width: 992px)
+        display: none
+
+    &_bottom
+      right: 0
+      bottom: 60px
+      @media(max-width: 992px)
+        bottom: 0
+        right: 15px
+      img, svg
+        transform: rotate(180deg)

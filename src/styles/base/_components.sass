@@ -1,0 +1,194 @@
+.preloader
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 20
+  background: #fff
+  display: flex
+  justify-content: center
+  align-items: center
+
+.preloader__ico
+  flex: 0 0 auto
+
+svg.svg_animation, svg.svg_anim
+  transform-origin: 50% 65%
+  opacity: 0.7
+
+  path
+    opacity: 0
+    transform: translateY(10px)
+    transition: transform 100ms ease-out, opacity 100ms ease-out
+
+  path:first-child
+    fill: rgba(#092290, 0)
+    stroke-width: 2px
+    stroke-dasharray: 130px
+    stroke-dashoffset: 150px
+    animation-direction: alternate
+
+  path:nth-child(2)
+    fill: rgba(#092290, 0)
+    stroke-width: 2px
+    stroke-dasharray: 130px
+    stroke-dashoffset: 150px
+    animation-direction: alternate
+
+  path:last-child
+    stroke-width: 2px
+    stroke-dasharray: 130px
+    stroke-dashoffset: 150px
+    animation-direction: alternate
+
+svg.svg_animation
+  path:first-child
+    animation: dash 1.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite
+
+  path:nth-child(2)
+    animation: dash 1.5s 400ms cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite
+
+  path:last-child
+    animation: dash2 1.5s 600ms cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite
+
+svg.svg_anim
+  path:first-child
+    animation: dash 1.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+
+  path:nth-child(2)
+    animation: dash 1.5s 400ms cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+
+  path:last-child
+    animation: dash2 1.5s 600ms cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+
+
+
+
+@keyframes dash
+  50%
+    opacity: 1
+    transform: translateY(0)
+  80%
+    stroke-dashoffset: 0
+  100%
+    opacity: 1
+    transform: translateY(0)
+    stroke-dashoffset: 0
+    fill: rgba(#092290, 1)
+
+@keyframes dash2
+  50%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    stroke-dashoffset: 0
+    opacity: 1
+    transform: translateY(0)
+
+.btn
+  &_yellow
+    display: inline-block
+    background: $yellow
+    width: 219px
+    padding: 5px
+    text-align: center
+    text-transform: uppercase
+    text-decoration: none
+    font-family: $roboto
+    font-weight: $bd
+    line-height: 24px
+    letter-spacing: 0.5px
+    color: $main
+    transition: color 300ms ease-out, background 300ms ease-out
+    &:hover
+      color: $yellow
+      background: $main
+
+  &_yellow-ani
+    display: inline-block
+    position: relative
+    background: $yellow
+    width: 219px
+    padding: 5px
+    text-align: center
+    text-transform: uppercase
+    text-decoration: none
+    font-family: $roboto
+    font-weight: $bd
+    line-height: 24px
+    letter-spacing: 0.5px
+    color: $main
+    transition: color 200ms 100ms ease-out
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 100%
+      //opacity: 0
+      background: $main
+      transform: scaleX(0)
+      transform-origin: left top
+      transition: transform 300ms ease-out
+    span
+      position: relative
+      z-index: 1
+    &:hover
+      &:before
+        //opacity: 1
+        transform: scaleX(1)
+        transition: transform 300ms ease-out
+      color: $yellow
+
+
+.slider-dots
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  @media(max-width: 1024px)
+    display: none
+  &, .container-fluid, .row
+    height: 100vh
+  .sl-e
+    position: absolute
+    z-index: 2
+    top: 0
+    left: 40px
+    height: 100%
+    @media(max-width: 1280px)
+      left: 20px
+
+  ul
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      a
+        background: none
+        border: none
+        cursor: pointer
+        flex: 0 1 auto
+        font-family: $cutive
+        font-size: 15px
+        line-height: 53px
+        color: #8991AA
+        text-decoration: none
+        opacity: 0.5
+        transition: color 300ms ease-in-out
+        outline: none
+
+        &.active
+          color: $main
+
+
+
+//Class for lettering
+
+.ln
+  display: block
