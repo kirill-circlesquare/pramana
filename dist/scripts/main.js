@@ -55,7 +55,7 @@ function addAnimateClass(productAnimate, productCover) {
 	var classItem = arguments.length <= 2 || arguments[2] === undefined ? 'svg_anim' : arguments[2];
 	var offsetTop = arguments.length <= 3 || arguments[3] === undefined ? 500 : arguments[3];
 	var durItem = arguments.length <= 4 || arguments[4] === undefined ? 0.5 : arguments[4];
-	var delayItem = arguments.length <= 5 || arguments[5] === undefined ? 0.3 : arguments[5];
+	var delayItem = arguments.length <= 5 || arguments[5] === undefined ? 0.15 : arguments[5];
 
 	var productItem = productAnimate;
 	var section = productCover;

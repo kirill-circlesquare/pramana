@@ -47,7 +47,7 @@ function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimat
 
 }
 
-function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', offsetTop = 500, durItem = 0.5, delayItem = 0.3) {
+function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', offsetTop = 500, durItem = 0.5, delayItem = 0.15) {
 	
 	var productItem = productAnimate;
 	var section = productCover;
