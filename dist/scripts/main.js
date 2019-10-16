@@ -51,9 +51,11 @@ function animateProducts(productAnimate, productCover) {
 	}).setTween(tl).addTo(controller);
 }
 
-function animateClass(productAnimate, productCover) {
-	var delayItem = arguments.length <= 2 || arguments[2] === undefined ? 0.15 : arguments[2];
-	var topOffset = arguments.length <= 3 || arguments[3] === undefined ? 500 : arguments[3];
+function addAnimateClass(productAnimate, productCover) {
+	var classItem = arguments.length <= 2 || arguments[2] === undefined ? 'svg_anim' : arguments[2];
+	var offsetTop = arguments.length <= 3 || arguments[3] === undefined ? 500 : arguments[3];
+	var durItem = arguments.length <= 4 || arguments[4] === undefined ? 0.5 : arguments[4];
+	var delayItem = arguments.length <= 5 || arguments[5] === undefined ? 0.3 : arguments[5];
 
 	var productItem = productAnimate;
 	var section = productCover;
@@ -62,18 +64,7 @@ function animateClass(productAnimate, productCover) {
 		return;
 	}
 
-	var tl = new TimelineMax().staggerFromTo(productItem, 0.4, {
-		backgroundColor: '#fff',
-		autoAlpha: 0,
-		transition: 'none'
-	}, {
-		autoAlpha: 1,
-		easing: Power1.easeOut
-	}, delayItem).staggerTo(productItem, 0.4, {
-		backgroundColor: '#092290',
-		clearProps: 'transition, transform, opacity',
-		ease: Power1.easeOut
-	}, delayItem);
+	var tl = new TimelineMax().staggerTo(productItem, durItem, { css: { className: '+=' + classItem } }, delayItem);
 
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
@@ -84,32 +75,9 @@ function animateClass(productAnimate, productCover) {
 	// build scenes
 	new ScrollMagic.Scene({
 		triggerElement: section,
-		offset: topOffset,
+		offset: offsetTop,
 		reverse: true
 	}).setTween(tl).addTo(controller);
-}
-
-function addAnimateClass(productAnimate, productCover) {
-
-	var productItem = productAnimate;
-	var section = productCover;
-
-	if (!$(section).length) {
-		return;
-	}
-
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
-			triggerHook: 'onEnter'
-		}
-	});
-
-	// build scenes
-	new ScrollMagic.Scene({
-		triggerElement: section,
-		offset: 500,
-		reverse: true
-	}).setClassToggle(productItem, "svg_animation").addTo(controller);
 }
 
 // Parallax animation end
@@ -120,25 +88,27 @@ $(document).ready(function () {
 
 	var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 
-	// if (!mobDev) {
-	animateProducts('.main-cover .fade-up', '.main-cover');
-	animateProducts('.about-us .fade-up', '.about-us');
+	if (!mobDev) {
+		animateProducts('.main-cover .fade-up', '.main-cover');
+		animateProducts('.about-us .fade-up', '.about-us');
 
-	// animateClass('.solutions .cc span','.solutions');
-	addAnimateClass('.solutions .svg_item', '.solutions');
+		addAnimateClass('.solutions .svg_item', '.solutions');
 
-	// animateProducts('.solutions .fade-up','.solutions');
-	animateProducts('.idea-block .fade-up', '.idea-block');
-	animateProducts('.compare .fade-up', '.compare');
-	animateProducts('.trust .fade-up', '.trust', 0.25, 0);
-	animateProducts('.cta .fade-up', '.cta');
-	animateProducts('.footer .fade-up', '.footer', 0.25, 20, 100);
+		animateProducts('.idea-block .fade-up', '.idea-block');
+		animateProducts('.compare .fade-up', '.compare');
+		animateProducts('.trust .fade-up', '.trust', 0.25, 0);
+		animateProducts('.cta .fade-up', '.cta');
+		animateProducts('.footer .fade-up', '.footer', 0.25, 20, 100);
 
-	// SVG Animate
-	animateProducts('.about-us .fade-svg1', '.about-us', 0.05, 0);
-	animateProducts('.about-us .fade-svg2', '.about-us', 0.05, 0);
-
-	// }
+		// SVG Animate
+		animateProducts('.about-us .fade-svg1', '.about-us', 0.05, 0);
+		animateProducts('.about-us .fade-svg2', '.about-us', 0.05, 0);
+	} else {
+		$('.solutions').find('.solution_icon').each(function () {
+			$(this).addClass('mob_icon');
+			console.log('each');
+		});
+	}
 
 	// Animation just for web end
 

@@ -5391,44 +5391,27 @@ html
 }
 
 svg.svg_animation,
-svg.svg_anim
+svg.svg_item
 {
     transform-origin: 50% 65%;
 
     opacity: .7;
 }
+svg.svg_animation,
+svg.svg_animation *,
+svg.svg_item,
+svg.svg_item *
+{
+    margin: 0; 
+    padding: 0;
+}
 svg.svg_animation path,
-svg.svg_anim path
+svg.svg_item path
 {
     transition: transform 100ms ease-out, opacity 100ms ease-out; 
     transform: translateY(10px);
 
     opacity: 0;
-}
-svg.svg_animation path:first-child,
-svg.svg_anim path:first-child
-{
-    animation-direction: alternate; 
-
-    fill: rgba(9, 34, 144, 0);
-    stroke-width: 2px;
-    stroke-dasharray: 130px;
-    stroke-dashoffset: 150px;
-}
-svg.svg_animation path:nth-child(2),
-svg.svg_anim path:nth-child(2)
-{
-    animation-direction: alternate; 
-
-    fill: rgba(9, 34, 144, 0);
-    stroke-width: 2px;
-    stroke-dasharray: 130px;
-    stroke-dashoffset: 150px;
-}
-svg.svg_animation path:last-child,
-svg.svg_anim path:last-child
-{
-    animation-direction: alternate; 
 
     stroke-width: 2px;
     stroke-dasharray: 130px;
@@ -5438,31 +5421,23 @@ svg.svg_anim path:last-child
 svg.svg_animation path:first-child
 {
     animation: dash 1.5s cubic-bezier(.35, .04, .63, .95) infinite;
+    animation-direction: alternate; 
+
+    fill: rgba(9, 34, 144, 0);
 }
 
 svg.svg_animation path:nth-child(2)
 {
     animation: dash 1.5s 400ms cubic-bezier(.35, .04, .63, .95) infinite;
+    animation-direction: alternate; 
+
+    fill: rgba(9, 34, 144, 0);
 }
 
 svg.svg_animation path:last-child
 {
     animation: dash2 1.5s 600ms cubic-bezier(.35, .04, .63, .95) infinite;
-}
-
-svg.svg_anim path:first-child
-{
-    animation: dash 1.5s cubic-bezier(.35, .04, .63, .95) 1;
-}
-
-svg.svg_anim path:nth-child(2)
-{
-    animation: dash 1.5s 400ms cubic-bezier(.35, .04, .63, .95) 1;
-}
-
-svg.svg_anim path:last-child
-{
-    animation: dash2 1.5s 600ms cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate;
 }
 
 @keyframes dash
@@ -6302,7 +6277,6 @@ body .trust .container .row,
 {
     .solution_icon
     {
-        height: 47px;
         margin-bottom: 50px; 
 
         text-align: center;
@@ -6348,132 +6322,113 @@ body .trust .container .row,
     color: #365bff;
 }
 
-.c1,
-.c2,
-.c3
+.mob_icon svg path
+{
+    transform: translateY(0); 
+
+    opacity: 1;
+
+    stroke-dashoffset: 0;
+}
+
+.cc
 {
     position: relative;
 
     width: 100%;
+    max-width: 119px;
     height: 100%;
 }
 @media (max-width: 820px)
 {
-    .c1,
-    .c2,
-    .c3
+    .cc
     {
         display: inline-block;
     }
 }
-.c1 span,
-.c2 span,
-.c3 span
+.cc svg
 {
-    position: absolute;
+    width: 100%;
+    max-width: 119px;
+    height: 74px;
 
-    display: inline-block;
-
-    width: 19px;
-    height: 19px;
-
-    border: 2px solid #092290;
-    border-radius: 100%;
-    background: #092290;
-}
-@media (max-width: 820px)
-{
-    .c1 span,
-    .c2 span,
-    .c3 span
-    {
-        width: 13px;
-        height: 13px;
-    }
+    opacity: 1;
 }
 
 @media (max-width: 820px)
 {
     .c1
     {
-        width: 13px;
+        width: 19px;
     }
 }
 
-.c1 span
+.c1 svg.svg_anim path.pf-1
 {
-    bottom: 0;
-    left: 0;
+    animation: dash2 1s cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate; 
+
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 820px)
 {
     .c2
     {
-        width: 47px;
+        width: 70px;
     }
 }
 
-.c2 span
+.c2 svg.svg_anim path.pf-1
 {
-    left: 0;
+    animation: dash 1s cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate; 
+
+    fill: rgba(9, 34, 144, 0);
+    animation-fill-mode: forwards;
 }
-.c2 span:first-child
+
+.c2 svg.svg_anim path.pf-2
 {
-    bottom: 0;
-}
-.c2 span:last-child
-{
-    top: 0;
-    left: 50px;
-}
-@media (max-width: 820px)
-{
-    .c2 span:last-child
-    {
-        left: 33px;
-    }
+    animation: dash 1s .3s cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate; 
+
+    fill: rgba(9, 34, 144, 0);
+    animation-fill-mode: forwards;
 }
 
 @media (max-width: 820px)
 {
     .c3
     {
-        width: 80px;
+        width: 119px;
     }
 }
 
-.c3 span
+.c3 svg.svg_anim path.pf-1
 {
-    left: 0;
+    animation: dash 1s cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate; 
+
+    fill: rgba(9, 34, 144, 0);
+    animation-fill-mode: forwards;
 }
-.c3 span:first-child
+
+.c3 svg.svg_anim path.pf-2
 {
-    bottom: 0;
+    animation: dash 1s .3s cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate; 
+
+    fill: rgba(9, 34, 144, 0);
+    animation-fill-mode: forwards;
 }
-.c3 span:nth-child(2)
+
+.c3 svg.svg_anim path.pf-3
 {
-    top: 0;
-    left: 50px;
-}
-@media (max-width: 820px)
-{
-    .c3 span:nth-child(2)
-    {
-        left: 33px;
-    }
-}
-.c3 span:last-child
-{
-    bottom: 0;
-    left: 100px;
-}
-@media (max-width: 820px)
-{
-    .c3 span:last-child
-    {
-        left: 67px;
-    }
+    animation: dash2 1s .5s cubic-bezier(.35, .04, .63, .95) 1;
+    animation-direction: alternate; 
+
+    animation-fill-mode: forwards;
 }
 
 .idea-block

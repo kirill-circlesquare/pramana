@@ -25,7 +25,6 @@
 
     @media(max-width: 820px)
       text-align: center
-      height: 47px
       margin-bottom: 50px
 
   &_title
@@ -47,63 +46,68 @@
       &, .solution_title
         color: $blue
 
+.mob_icon
+  svg
+    path
+      opacity: 1
+      stroke-dashoffset: 0
+      transform: translateY(0)
 
-.c1, .c2, .c3
+.cc
   position: relative
   width: 100%
+  max-width: 119px
   height: 100%
   @media(max-width: 820px)
     display: inline-block
-  span
-    position: absolute
-    display: inline-block
-    width: 19px
-    height: 19px
-    border-radius: 100%
-    border: 2px solid #092290
-    background: #092290
-    @media(max-width: 820px)
-      width: 13px
-      height: 13px
+  svg
+    width: 100%
+    max-width: 119px
+    height: 74px
+    opacity: 1
 
 .c1
   @media(max-width: 820px)
-    width: 13px
-  span
-    bottom: 0
-    left: 0
-    //border: 2px solid #092290
+    width: 19px
+  svg.svg_anim
+    path.pf-1
+      animation: dash2 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+      animation-fill-mode: forwards
+      animation-direction: alternate
 
 .c2
   @media(max-width: 820px)
-    width: 47px
-  span
-    left: 0
-    //background: #092290
-    &:first-child
-      bottom: 0
-    &:last-child
-      top: 0
-      left: 50px
-      @media(max-width: 820px)
-        left: 33px
+    width: 70px
+  svg.svg_anim
+    path.pf-1
+      fill: rgba(#092290, 0)
+      animation: dash 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+      animation-fill-mode: forwards
+      animation-direction: alternate
+
+    path.pf-2
+      fill: rgba(#092290, 0)
+      animation: dash 1s 0.3s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+      animation-fill-mode: forwards
+      animation-direction: alternate
+
 .c3
   @media(max-width: 820px)
-    width: 80px
-  span
-    left: 0
-    //background: #092290
-    &:first-child
-      bottom: 0
-    &:nth-child(2)
-      top: 0
-      left: 50px
-      @media(max-width: 820px)
-        left: 33px
-    &:last-child
-      bottom: 0
-      left: 100px
-      //background: none
-      //border: 2px solid #092290
-      @media(max-width: 820px)
-        left: 67px
+    width: 119px
+  svg.svg_anim
+    path.pf-1
+      fill: rgba(#092290, 0)
+      animation: dash 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+      animation-fill-mode: forwards
+      animation-direction: alternate
+
+    path.pf-2
+      fill: rgba(#092290, 0)
+      animation: dash 1s 0.3s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+      animation-fill-mode: forwards
+      animation-direction: alternate
+
+    path.pf-3
+      animation: dash2 1s 0.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+      animation-fill-mode: forwards
+      animation-direction: alternate

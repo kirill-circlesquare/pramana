@@ -47,7 +47,7 @@ function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimat
 
 }
 
-function animateClass(productAnimate, productCover, delayItem = 0.15, topOffset = 500) {
+function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', offsetTop = 500, durItem = 0.5, delayItem = 0.3) {
 	
 	var productItem = productAnimate;
 	var section = productCover;
@@ -57,19 +57,7 @@ function animateClass(productAnimate, productCover, delayItem = 0.15, topOffset 
 	}
 	
 	const tl = new TimelineMax()
-	.staggerFromTo(productItem, 0.4, {
-		backgroundColor: '#fff',
-		autoAlpha: 0,
-		transition: 'none'
-	}, {
-		autoAlpha: 1,
-		easing: Power1.easeOut
-	}, delayItem)
-	.staggerTo(productItem, 0.4, {
-		backgroundColor: '#092290',
-		clearProps: 'transition, transform, opacity',
-		ease:Power1.easeOut
-	}, delayItem);
+	.staggerTo(productItem, durItem, {css:{className:'+=' + classItem}}, delayItem);
 	
 	var controller = new ScrollMagic.Controller({
 		globalSceneOptions: {
@@ -80,34 +68,7 @@ function animateClass(productAnimate, productCover, delayItem = 0.15, topOffset 
 	// build scenes
 	new ScrollMagic.Scene({
 		triggerElement: section,
-		offset: topOffset,
-		reverse: true
-	}).setTween(tl).addTo(controller);
-	
-}
-
-function addAnimateClass(productAnimate, productCover) {
-	
-	var productItem = productAnimate;
-	var section = productCover;
-	
-	if (!$(section).length) {
-		return;
-	}
-	
-	const tl = new TimelineMax()
-	.staggerTo(productItem, 0.5, {css:{className:'+=svg_animation'}});
-	
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
-			triggerHook: 'onEnter'
-		}
-	});
-	
-	// build scenes
-	new ScrollMagic.Scene({
-		triggerElement: section,
-		offset: topOffset,
+		offset: offsetTop,
 		reverse: true
 	}).setTween(tl).addTo(controller);
 	
@@ -121,14 +82,12 @@ $(document).ready( function(){
 	
 	var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
 	
-	// if (!mobDev) {
+	if (!mobDev) {
 		animateProducts('.main-cover .fade-up','.main-cover');
 		animateProducts('.about-us .fade-up','.about-us');
 		
-		// animateClass('.solutions .cc span','.solutions');
 		addAnimateClass('.solutions .svg_item','.solutions');
 		
-		// animateProducts('.solutions .fade-up','.solutions');
 		animateProducts('.idea-block .fade-up', '.idea-block');
 		animateProducts('.compare .fade-up', '.compare');
 		animateProducts('.trust .fade-up', '.trust', 0.25, 0);
@@ -139,7 +98,11 @@ $(document).ready( function(){
 		animateProducts('.about-us .fade-svg1','.about-us', 0.05, 0);
 		animateProducts('.about-us .fade-svg2','.about-us', 0.05, 0);
 		
-	// }
+	} else {
+		$('.solutions').find('.solution_icon').each(function() {
+			$(this).addClass('mob_icon');
+		});
+	}
 	
 	// Animation just for web end
 	
