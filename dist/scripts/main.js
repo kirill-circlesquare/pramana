@@ -106,7 +106,6 @@ $(document).ready(function () {
 	} else {
 		$('.solutions').find('.solution_icon').each(function () {
 			$(this).addClass('mob_icon');
-			console.log('each');
 		});
 	}
 

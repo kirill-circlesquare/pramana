@@ -5645,10 +5645,26 @@ body
     font-weight: 300;
     line-height: 25px;
 
+    padding-left: 90px; 
+
     letter-spacing: .53px;
 
-    color: #161514; 
+    color: #161514;
     background: #fff;
+}
+@media (max-width: 1280px)
+{
+    body
+    {
+        padding-left: 70px;
+    }
+}
+@media (max-width: 1024px)
+{
+    body
+    {
+        padding-left: 0;
+    }
 }
 body main
 {
