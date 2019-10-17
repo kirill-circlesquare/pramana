@@ -1,7 +1,7 @@
 // Init controller
 var controller = new ScrollMagic.Controller({
 	globalSceneOptions: {
-		duration: $('section').height(),
+		duration: $('section').height() / 2,
 		triggerHook: .025,
 		reverse: true
 	}

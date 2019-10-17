@@ -1,10 +1,13 @@
 .trust
-  padding: 210px 0
-  background: linear-gradient(0deg, rgba(213, 213, 213, 0.185424), rgba(213, 213, 213, 0.185424))
-  &, .container .row
-    @extend .screen-height
-  @media(max-width: 992px)
+  display: flex
+  align-items: center
+  @extend .screen-height
+  &_bg
+    min-width: 100%
     padding: 180px 0
+    background: linear-gradient(0deg, rgba(213, 213, 213, 0.185424), rgba(213, 213, 213, 0.185424))
+    @media(max-width: 992px)
+      padding: 180px 0
 
   .h-title, .sub-title
     text-align: center
