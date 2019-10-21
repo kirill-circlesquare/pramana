@@ -4,42 +4,42 @@
     @extend .screen-height
   @media(max-width: 992px)
     padding: 40px 0 105px
-  .cats
-    display: flex
-    padding: 24px
-    background: url('../images/arrow-small.svg') left top no-repeat
-    @media(max-width: 992px)
-      flex-wrap: wrap
-      background: none
-      padding: 0
-      margin: 0 -10px
-    .cat
-      &_img
-        flex: 0 1 25%
-        padding: 0 5px
-        @media(max-width: 820px)
-          flex: 0 1 50%
-          padding: 10px
-
-        img
-          width: 100%
-          height: auto
   &_info
     margin-top: 20px
     text-align: center
     @media(max-width: 820px)
       margin-top: 40px
 
-    .h-title, .p-text
+    .h-title, .p-text_big
       color: $main
       text-align: center
 
-    .p-text
-      font-family: $roboto
-      font-weight: $lt
-      font-size: 26px
-      line-height: 38px
+    .p-text_big
       margin-bottom: 30px
-      @media(max-width: 820px)
-        font-size: 18px
-        line-height: 28px
+
+.comparing
+  &_items
+    display: flex
+    margin: 0 -5px
+    &-bg
+      padding: 24px
+      background: url('../images/arrow-small.svg') left top no-repeat
+    @media(max-width: 820px)
+      flex-wrap: wrap
+      justify-content: space-around
+      background: none
+      padding: 0
+      margin: 0 -10px
+  &_img
+    flex: 1 1 auto
+    padding: 0 5px
+    @media(max-width: 820px)
+      flex: 0 1 50%
+      padding: 10px
+    @media(max-width: 576px)
+      flex: 1 1 100%
+      padding: 10px 0
+
+    img
+      width: 100%
+      height: auto

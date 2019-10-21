@@ -86,8 +86,6 @@ $(document).ready( function(){
 		animateProducts('.main-cover .fade-up','.main-cover');
 		animateProducts('.about-us .fade-up','.about-us');
 		
-		addAnimateClass('.solutions .svg_item','.solutions');
-		
 		animateProducts('.idea-block .fade-up', '.idea-block');
 		animateProducts('.compare .fade-up', '.compare');
 		animateProducts('.trust .fade-up', '.trust', 0.25, 0);
@@ -97,11 +95,24 @@ $(document).ready( function(){
 		// SVG Animate
 		animateProducts('.about-us .fade-svg1','.about-us', 0.05, 0);
 		animateProducts('.about-us .fade-svg2','.about-us', 0.05, 0);
+	
+		addAnimateClass('.solutions .svg_item','.solutions');
+		
+		// Animations for list with svg icons start
+		
+		var info_steps = document.querySelector('.info-steps');
+		
+		if(info_steps) {
+			for(let i = 0;i < $('.info-step').length; i++ ) {
+				let stepI = i + 1;
+				addAnimateClass('.info-step-' + stepI +' .svg_item','.info-step-' + stepI, 'svg_anim', 200);
+			}
+		}
+		
+		// Animations for list with svg icons end
 		
 	} else {
-		$('.solutions').find('.solution_icon').each(function() {
-			$(this).addClass('mob_icon');
-		});
+		$('body').addClass('show-svg');
 	}
 	
 	// Animation just for web end

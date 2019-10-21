@@ -92,8 +92,6 @@ $(document).ready(function () {
 		animateProducts('.main-cover .fade-up', '.main-cover');
 		animateProducts('.about-us .fade-up', '.about-us');
 
-		addAnimateClass('.solutions .svg_item', '.solutions');
-
 		animateProducts('.idea-block .fade-up', '.idea-block');
 		animateProducts('.compare .fade-up', '.compare');
 		animateProducts('.trust .fade-up', '.trust', 0.25, 0);
@@ -103,11 +101,24 @@ $(document).ready(function () {
 		// SVG Animate
 		animateProducts('.about-us .fade-svg1', '.about-us', 0.05, 0);
 		animateProducts('.about-us .fade-svg2', '.about-us', 0.05, 0);
+
+		addAnimateClass('.solutions .svg_item', '.solutions');
+
+		// Animations for list with svg icons start
+
+		var info_steps = document.querySelector('.info-steps');
+
+		if (info_steps) {
+			for (var i = 0; i < $('.info-step').length; i++) {
+				var stepI = i + 1;
+				addAnimateClass('.info-step-' + stepI + ' .svg_item', '.info-step-' + stepI, 'svg_anim', 200);
+			}
+		}
+
+		// Animations for list with svg icons end
 	} else {
-		$('.solutions').find('.solution_icon').each(function () {
-			$(this).addClass('mob_icon');
-		});
-	}
+			$('body').addClass('show-svg');
+		}
 
 	// Animation just for web end
 
@@ -145,7 +156,7 @@ $(document).ready(function () {
 ; // Init controller
 var controller = new ScrollMagic.Controller({
 	globalSceneOptions: {
-		duration: $('section').height() / 2,
+		duration: $('section').height() / 1.15,
 		triggerHook: .025,
 		reverse: true
 	}
@@ -205,18 +216,20 @@ controller.scrollTo(function (target) {
 //  Bind scroll to anchor links using Vanilla JavaScript
 var anchor_nav = document.querySelector('.anchor-nav');
 
-anchor_nav.addEventListener('click', function (e) {
-	var target = e.target,
-	    id = target.getAttribute('href');
+if (anchor_nav) {
+	anchor_nav.addEventListener('click', function (e) {
+		var target = e.target,
+		    id = target.getAttribute('href');
 
-	if (id !== null) {
-		if (id.length > 0) {
-			e.preventDefault();
-			controller.scrollTo(id);
+		if (id !== null) {
+			if (id.length > 0) {
+				e.preventDefault();
+				controller.scrollTo(id);
 
-			if (window.history && window.history.pushState) {
-				history.pushState("", document.title, id);
+				if (window.history && window.history.pushState) {
+					history.pushState("", document.title, id);
+				}
 			}
 		}
-	}
-});
+	});
+}

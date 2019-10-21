@@ -1,7 +1,7 @@
 // Init controller
 var controller = new ScrollMagic.Controller({
 	globalSceneOptions: {
-		duration: $('section').height() / 2,
+		duration: $('section').height() / 1.15,
 		triggerHook: .025,
 		reverse: true
 	}
@@ -66,18 +66,20 @@ controller.scrollTo(function(target) {
 //  Bind scroll to anchor links using Vanilla JavaScript
 var anchor_nav = document.querySelector('.anchor-nav');
 
-anchor_nav.addEventListener('click', function(e) {
-	var target = e.target,
-			id     = target.getAttribute('href');
-	
-	if(id !== null) {
-		if(id.length > 0) {
-			e.preventDefault();
-			controller.scrollTo(id);
-			
-			if(window.history && window.history.pushState) {
-				history.pushState("", document.title, id);
+if(anchor_nav) {
+	anchor_nav.addEventListener('click', function(e) {
+		var target = e.target,
+				id     = target.getAttribute('href');
+		
+		if(id !== null) {
+			if(id.length > 0) {
+				e.preventDefault();
+				controller.scrollTo(id);
+				
+				if(window.history && window.history.pushState) {
+					history.pushState("", document.title, id);
+				}
 			}
 		}
-	}
-});
+	});
+}

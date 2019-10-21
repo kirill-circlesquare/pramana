@@ -1,0 +1,46 @@
+block menuLinks
+    - var menu1 = 'active'
+    - var menu2
+    - var menu3
+    - var menu4
+
+doctype html
+html
+    head
+        title Pramana
+        meta(charset='utf-8')
+        meta(name='viewport', content='initial-scale=1.0, width=device-width')
+        meta(name='theme-color', content='#ffffff')
+
+        link(type='text/css' rel='stylesheet' href='styles/styles.min.css')
+
+    body
+        .preloader
+            .preloader__ico
+                svg.svg_animation(fill='none', height='69', viewBox='0 0 119 99', width='119', xmlns='http://www.w3.org/2000/svg')
+                    g(stroke='#092290', stroke-width='2')
+                        path(d='m18 59.5c0 4.6944-3.8056 8.5-8.5 8.5-4.69442 0-8.5-3.8056-8.5-8.5s3.80558-8.5 8.5-8.5c4.6944 0 8.5 3.8056 8.5 8.5z', fill='#092290')
+                        path(d='m68 9.5c0 4.6944-3.8056 8.5-8.5 8.5s-8.5-3.8056-8.5-8.5c0-4.69442 3.8056-8.5 8.5-8.5s8.5 3.80558 8.5 8.5z', fill='#092290')
+                        path(d='m118 59.5c0 4.6944-3.806 8.5-8.5 8.5s-8.5-3.8056-8.5-8.5 3.806-8.5 8.5-8.5 8.5 3.8056 8.5 8.5z')
+
+
+        main
+            include ../sections/main/header
+
+            include ../sections/methodology/screen-dots
+            include ../sections/methodology/main-cover
+            include ../sections/methodology/idea-block
+            include ../sections/methodology/methodology-section
+            include ../sections/methodology/cta
+
+
+            include ../sections/main/footer
+
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js')
+
+        //script(src='scripts/jquery.lettering.js')
+        //script(src='scripts/slick.min.js')
+        script(src='scripts/main.min.js')

@@ -1,0 +1,96 @@
+.methodology-section
+  padding: 110px 0 35px
+  @media(max-width: 992px)
+    padding: 100px 0
+
+.info-steps
+  padding: 0
+  margin: 107px 0 0
+  list-style: none
+
+.info-step
+  display: flex
+  margin-bottom: 140px
+  flex-wrap: wrap
+  @media(max-width: 992px)
+    margin-bottom: 90px
+  &:last-child
+    margin-bottom: 0
+  &_icon
+    flex: 0 1 15%
+    @media(max-width: 992px)
+      text-align: center
+      flex: 1 1 100%
+      margin-bottom: 50px
+
+  &-1
+    svg.svg_anim
+      path.pf-1
+        animation: dash 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-2
+        animation: dash2 1s 0.3s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-3
+        animation: dash2 1s 0.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+  &-2
+    svg.svg_anim
+      path.pf-1
+        animation: dash 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-2
+        animation: dash2 1s 0.3s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+  &-3
+    svg.svg_anim
+      path.pf-1
+        animation: dash2 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-2
+        animation: dash2 1s 0.3s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-3
+        animation: dash2 1s 0.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-4
+        animation: dash2 1s 0.7s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+  &-4
+    svg.svg_anim
+      path.pf-1
+        animation: dash2 1s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-2
+        animation: dash2 1s 0.3s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+      path.pf-3
+        animation: dash2 1s 0.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) 1
+        animation-fill-mode: forwards
+
+
+  &_title
+    flex: 0 1 25%
+    font-family: $roboto
+    font-weight: $bd
+    font-size: 24px
+    line-height: 30px
+    letter-spacing: 0.4px
+    @media(max-width: 992px)
+      text-align: center
+      margin-bottom: 30px
+      flex: 1 1 100%
+  &_info
+    flex: 0 1 60%
+    @media(max-width: 992px)
+      text-align: center
+      flex: 1 1 100%

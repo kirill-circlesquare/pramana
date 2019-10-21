@@ -1,9 +1,18 @@
 .main-cover
-  //position: relative
   &, .main-row
     height: 100vh
     @media(max-width: 992px)
       height: auto
+
+  &_sub-page
+    @media(max-width: 1025px)
+      padding: 100px 0
+    @media(max-width: 576px)
+      padding: 100px 0 50px
+    &, .main-row
+      height: 100vh
+      @media(max-width: 1025px)
+        height: auto
 
   &_title
     position: relative
@@ -50,3 +59,7 @@
       background: url('../images/arrow-small.svg') left top no-repeat
       @media(max-width: 992px)
         display: none
+
+
+  .comparing_items
+    margin: 41px 0 53px

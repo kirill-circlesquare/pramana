@@ -34,6 +34,11 @@ gulp.task('images', function(){
 
 gulp.task('html', function(){
 	gulp.src('src/pug/pages/*.pug')
+	.pipe(plumber({
+		errorHandler: function (error) {
+			console.log(error.message);
+			this.emit('end');
+  }}))
 	.pipe(pug())
 	.pipe(prettyHtml())
 	.pipe(gulp.dest('dist/'))
