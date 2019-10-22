@@ -5,6 +5,7 @@
 $(window).load(function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
+		readyPage();
 	}, 2500);
 });
 
@@ -82,14 +83,18 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
+function readyPage() {
+	animateProducts('.main-cover .fade-up', '.main-cover');
+}
+
 $(document).ready(function () {
 
 	// Animation just for web start
 
-	var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+	// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+	var mobDev = false;
 
 	if (!mobDev) {
-		animateProducts('.main-cover .fade-up', '.main-cover');
 		animateProducts('.about-us .fade-up', '.about-us');
 
 		animateProducts('.idea-block .fade-up', '.idea-block');
