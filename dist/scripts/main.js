@@ -83,16 +83,17 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+
 function readyPage() {
-	animateProducts('.main-cover .fade-up', '.main-cover');
+	if (!mobDev) {
+		animateProducts('.main-cover .fade-up', '.main-cover');
+	}
 }
 
 $(document).ready(function () {
 
 	// Animation just for web start
-
-	// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-	var mobDev = false;
 
 	if (!mobDev) {
 		animateProducts('.about-us .fade-up', '.about-us');

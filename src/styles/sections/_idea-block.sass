@@ -1,6 +1,6 @@
 .idea-block
   padding: 70px 0
-  &, .container .row
+  &, .b-container .row
     @extend .screen-height
   @media(max-width: 820px)
     padding: 26px 0 70px
@@ -12,6 +12,11 @@
   .p-text, .p-text_big
     @media(max-width: 820px)
       text-align: center
+
+  .p-text_m-block
+    padding-right: 12%
+    @media(max-width: 1024px)
+      padding: 0
 
   &_img
     img

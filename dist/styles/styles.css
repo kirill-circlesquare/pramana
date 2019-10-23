@@ -447,8 +447,8 @@ html
     box-sizing: inherit;
 }
 
-.container,
-.container-fluid
+.b-container,
+.b-container-fluid
 {
     width: 100%;
     max-width: 1440px;
@@ -460,7 +460,7 @@ html
 
 @media (min-width: 576px)
 {
-    .container
+    .b-container
     {
         max-width: 540px;
     }
@@ -468,7 +468,7 @@ html
 
 @media (min-width: 768px)
 {
-    .container
+    .b-container
     {
         max-width: 720px;
     }
@@ -476,7 +476,7 @@ html
 
 @media (min-width: 992px)
 {
-    .container
+    .b-container
     {
         max-width: 960px;
     }
@@ -484,7 +484,7 @@ html
 
 @media (min-width: 1200px)
 {
-    .container
+    .b-container
     {
         max-width: 1170px;
     }
@@ -1741,8 +1741,8 @@ html
 
 .d-flex,
 .c-height,
-.c-height .container,
-.c-height .container-fluid
+.c-height .b-container,
+.c-height .b-container-fluid
 {
     display: -ms-flexbox !important;
     display: flex !important;
@@ -5346,8 +5346,8 @@ html
 }
 
 .c-height,
-.c-height .container,
-.c-height .container-fluid
+.c-height .b-container,
+.c-height .b-container-fluid
 {
     -ms-flex-direction: column;
         flex-direction: column; 
@@ -5355,8 +5355,8 @@ html
     max-height: 100%;
 }
 .c-height .row,
-.c-height .container .row,
-.c-height .container-fluid .row
+.c-height .b-container .row,
+.c-height .b-container-fluid .row
 {
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -5623,7 +5623,7 @@ svg.svg_animation path:last-child
     }
 }
 .slider-dots,
-.slider-dots .container-fluid,
+.slider-dots .b-container-fluid,
 .slider-dots .row
 {
     height: 100vh;
@@ -5809,6 +5809,8 @@ body .p-text_med
     font-size: 22px;
     font-weight: 300;
     line-height: 34px;
+
+    letter-spacing: 0;
 }
 @media (max-width: 768px)
 {
@@ -5824,6 +5826,8 @@ body .p-text_big
     font-size: 26px;
     font-weight: 300;
     line-height: 38px;
+
+    letter-spacing: 0;
 }
 @media (max-width: 768px)
 {
@@ -5843,17 +5847,17 @@ body .text-r
 }
 body .screen-height,
 body .about-us,
-body .about-us .container .row,
-.about-us .container body .row,
+body .about-us .b-container .row,
+.about-us .b-container body .row,
 body .solutions,
-body .solutions .container .row,
-.solutions .container body .row,
+body .solutions .b-container .row,
+.solutions .b-container body .row,
 body .idea-block,
-body .idea-block .container .row,
-.idea-block .container body .row,
+body .idea-block .b-container .row,
+.idea-block .b-container body .row,
 body .compare,
-body .compare .container .row,
-.compare .container body .row,
+body .compare .b-container .row,
+.compare .b-container body .row,
 body .trust
 {
     height: auto;
@@ -5862,17 +5866,17 @@ body .trust
 {
     body .screen-height,
     body .about-us,
-    body .about-us .container .row,
-    .about-us .container body .row,
+    body .about-us .b-container .row,
+    .about-us .b-container body .row,
     body .solutions,
-    body .solutions .container .row,
-    .solutions .container body .row,
+    body .solutions .b-container .row,
+    .solutions .b-container body .row,
     body .idea-block,
-    body .idea-block .container .row,
-    .idea-block .container body .row,
+    body .idea-block .b-container .row,
+    .idea-block .b-container body .row,
     body .compare,
-    body .compare .container .row,
-    .compare .container body .row,
+    body .compare .b-container .row,
+    .compare .b-container body .row,
     body .trust
     {
         min-height: 100vh; 
@@ -6284,7 +6288,7 @@ body .trust
 
 .main-cover .comparing_items
 {
-    margin: 41px 0 53px;
+    margin: 41px -10px 0;
 }
 
 .about-us
@@ -6600,6 +6604,17 @@ body .trust
         text-align: center;
     }
 }
+.idea-block .p-text_m-block
+{
+    padding-right: 12%;
+}
+@media (max-width: 1024px)
+{
+    .idea-block .p-text_m-block
+    {
+        padding: 0;
+    }
+}
 .idea-block_img img
 {
     width: 100%;
@@ -6882,7 +6897,7 @@ body .trust
             flex: 0 1 50%;
     }
 }
-@media (max-width: 576px)
+@media (max-width: 370px)
 {
     .comparing_img
     {
@@ -6962,14 +6977,14 @@ body .trust
     padding: 181px 0 147px;
 }
 .cta,
-.cta .container > .row
+.cta .b-container > .row
 {
     height: auto;
 }
 @media (min-width: 1025px)
 {
     .cta,
-    .cta .container > .row
+    .cta .b-container > .row
     {
         height: 93vh; 
         padding-top: 0;
@@ -7046,6 +7061,10 @@ body .trust
 {
     -ms-flex: 0 1 15%;
         flex: 0 1 15%;
+}
+.info-step_icon *
+{
+    width: 100%;
 }
 @media (max-width: 992px)
 {
