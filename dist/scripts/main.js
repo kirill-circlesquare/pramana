@@ -84,8 +84,8 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
-// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-var mobDev = false;
+var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// var mobDev = false
 
 function readyPage() {
 	if (!mobDev) {
