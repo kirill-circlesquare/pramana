@@ -11,7 +11,7 @@ $(window).load(function () {
 
 // Parallax amination start
 
-function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimation = 60, topOffset = 500) {
+function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimation = 60, topOffset = 500, mainDelay = 0.15) {
 	var productItem = productAnimate;
 	var section = productCover;
 	
@@ -25,7 +25,7 @@ function animateProducts(productAnimate, productCover, delayItem = 0.15, yAnimat
 		transition: 'none'
 	});
 	
-	const tl = new TimelineMax()
+	const tl = new TimelineMax({delay:mainDelay})
 		.staggerTo(productItem, 0.4, {
 			y: 0,
 			autoAlpha: 1,
@@ -77,11 +77,14 @@ function addAnimateClass(productAnimate, productCover, classItem = 'svg_anim', o
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobDev = false
 
 function readyPage() {
 	if (!mobDev) {
-		animateProducts('.main-cover .fade-up', '.main-cover');
+		// setTimeout( function () {
+			animateProducts('.main-cover .fade-up', '.main-cover', 0.15, 60, 500, 0.5);
+		// },1000);
 	}
 }
 

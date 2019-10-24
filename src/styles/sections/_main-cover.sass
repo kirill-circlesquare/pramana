@@ -5,8 +5,16 @@
       height: auto
 
   &_sub-page
+    .comparing_items
+      padding-bottom: 53px
     @media(max-width: 1025px)
+      .comparing_items
+        padding-bottom: 0
       padding: 100px 0
+    @media(max-width: 768px)
+      .comparing_items
+        .comparing_img:nth-child(3)
+          display: none
     @media(max-width: 576px)
       padding: 100px 0 50px
     &, .m-row
@@ -17,6 +25,10 @@
   &_title
     position: relative
     z-index: 1
+    @media(min-width: 1367px)
+      padding-right: 8%
+    @media(max-width: 1367px) and (min-width: 1280px)
+      padding-right: 5%
     @media(max-width: 820px)
       text-align: center
       margin-top: 30px
@@ -61,6 +73,11 @@
       @media(max-width: 992px)
         display: none
 
+
+  //.title-info
+  //  padding-right: 12%
+  //  @media(max-width: 1280px)
+  //    padding-right: 0
 
   .comparing_items
     margin: 41px -10px 0

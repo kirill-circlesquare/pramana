@@ -13,12 +13,17 @@
     position: relative
     z-index: 2
     line-height: 0
+    background: #fff
     a
       text-decoration: none
 
     img, svg
       width: 186px
       height: 42px
+      object-fit: contain
+      @media(max-width: 768px)
+        width: 100%
+        height: auto
 
   &_menu
     text-align: right
@@ -48,6 +53,10 @@
       &.active
         pointer-events: none
         background: $yellow
+      &.disable
+        pointer-events: none
+        opacity: 0.3
+        display: none
 
       @media(max-width: 992px)
         margin-right: 35px
@@ -136,6 +145,10 @@
         &.active
           pointer-events: none
           background: $yellow
+        &.disable
+          pointer-events: none
+          opacity: 0.3
+          display: none
 
 .main-header_d-menu
   &.active
