@@ -7142,8 +7142,8 @@ body .trust
 }
 .info-step_icon
 {
-    -ms-flex: 0 1 15%;
-        flex: 0 1 15%;
+    -ms-flex: 0 1 16%;
+        flex: 0 1 16%;
 }
 .info-step_icon *
 {
@@ -7241,17 +7241,20 @@ body .trust
     font-weight: 700;
     line-height: 30px;
 
-    letter-spacing: .4px; 
+    padding-right: 20px; 
 
-    -ms-flex: 0 1 25%; 
+    letter-spacing: .4px;
 
-        flex: 0 1 25%;
+    -ms-flex: 0 1 28%;
+
+        flex: 0 1 28%;
 }
 @media (max-width: 992px)
 {
     .info-step_title
     {
         margin-bottom: 30px;
+        padding-right: 0;
 
         text-align: center;
 
@@ -7262,8 +7265,8 @@ body .trust
 }
 .info-step_info
 {
-    -ms-flex: 0 1 60%;
-        flex: 0 1 60%;
+    -ms-flex: 0 1 56%;
+        flex: 0 1 56%;
 }
 @media (max-width: 992px)
 {
