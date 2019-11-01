@@ -2,7 +2,7 @@
 
 'use strict';
 
-$(window).load(function () {
+$(window).on('load', function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
 		readyPage();
