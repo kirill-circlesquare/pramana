@@ -6198,36 +6198,33 @@ body .trust
     }
 }
 
-.main-cover_sub-page .comparing_items
+.main-cover_sub-page .m-row
 {
     padding-bottom: 53px;
 }
-
 @media (max-width: 1025px)
 {
-    .main-cover_sub-page
+    .main-cover_sub-page .m-row
     {
-        padding: 100px 0;
+        padding: 120px 0 100px;
     }
-    .main-cover_sub-page .comparing_items
+    .main-cover_sub-page .m-row .comparing_items
     {
         padding-bottom: 0;
     }
 }
-
 @media (max-width: 768px)
 {
-    .main-cover_sub-page .comparing_items .comparing_img:nth-child(3)
+    .main-cover_sub-page .m-row .comparing_items .comparing_img:nth-child(3)
     {
         display: none;
     }
 }
-
 @media (max-width: 576px)
 {
-    .main-cover_sub-page
+    .main-cover_sub-page .m-row
     {
-        padding: 100px 0 50px;
+        padding: 120px 0 30px;
     }
 }
 
@@ -6272,6 +6269,10 @@ body .trust
 
         text-align: center;
     }
+}
+.main-cover_title-img
+{
+    text-align: center;
 }
 .main-cover_title .btn_yellow,
 .main-cover_title .btn_yellow-ani
@@ -6351,6 +6352,12 @@ body .trust
     {
         display: none;
     }
+}
+.main-cover .h1-title_clean:before
+{
+    display: none;
+
+    padding-top: 0;
 }
 
 .main-cover .comparing_items
@@ -7277,6 +7284,54 @@ body .trust
         -ms-flex: 1 1 100%;
 
             flex: 1 1 100%;
+    }
+}
+
+.calendar-section
+{
+    padding: 20px 0 0;
+}
+.calendar-section .h-title
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 38px;
+
+    margin: 0; 
+    padding: 0;
+
+    letter-spacing: 0;
+}
+.calendar-section .h-title a
+{
+    transition: border 300ms ease-out; 
+    text-decoration: none;
+
+    color: #161514;
+    border-bottom: 6px solid #fef300;
+}
+.calendar-section .h-title a:hover
+{
+    border-bottom: 6px solid #161514;
+}
+@media (max-width: 576px)
+{
+    .calendar-section .calendly_wrap
+    {
+        margin: 0 -16px;
+    }
+}
+
+.cs_title
+{
+    margin-bottom: 60px;
+}
+@media (max-width: 576px)
+{
+    .cs_title
+    {
+        margin-bottom: 30px;
     }
 }
 
