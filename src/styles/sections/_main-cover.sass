@@ -1,8 +1,6 @@
 .main-cover
   &, .m-row
     height: 100vh
-    @media(max-width: 992px)
-      height: auto
 
   &_sub-page
     .m-row
@@ -20,8 +18,16 @@
 
     &, .m-row
       height: 100vh
-      @media(max-width: 1025px)
+
+    &-small
+      &, .m-row
         height: auto
+        min-height: 580px
+
+  &, .m-row
+    @media(max-width: 992px)
+      height: auto
+      min-height: auto
 
   &_title
     position: relative
