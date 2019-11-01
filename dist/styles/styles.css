@@ -1355,6 +1355,8 @@ body .trust
 }
 .main-cover_title-img
 {
+    margin-bottom: 30px; 
+
     text-align: center;
 }
 .main-cover_title .btn_yellow,
