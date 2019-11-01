@@ -4,6 +4,7 @@ $(window).on('load', function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
 		readyPage();
+		animIconCover();
 	}, 2500);
 });
 
@@ -82,9 +83,21 @@ var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAge
 
 function readyPage() {
 	if (!mobDev) {
+		animateProducts('.main-cover .fade-up', '.main-cover', 0.15, 60, 500, 0.5);
 		// setTimeout( function () {
-			animateProducts('.main-cover .fade-up', '.main-cover', 0.15, 60, 500, 0.5);
+		
 		// },1000);
+	}
+}
+
+function animIconCover() {
+	var coverIcon = document.querySelector('.mc_title-img');
+	
+	if(coverIcon) {
+		setTimeout( function () {
+			addAnimateClass('.mc_title-img .svg_item','.mc_title-img', 'svg_anim', 0);
+			console.log('done')
+		},1000);
 	}
 }
 

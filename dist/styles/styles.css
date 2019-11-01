@@ -1298,7 +1298,7 @@ body .trust
 {
     .main-cover_sub-page .m-row
     {
-        padding: 120px 0 30px;
+        padding: 30px 0;
     }
 }
 
@@ -1448,6 +1448,21 @@ body .trust
 .main-cover .comparing_items
 {
     margin: 41px -10px 0;
+}
+
+.mc_title-img svg.svg_anim path.mc-1
+{
+    animation: dash 1s cubic-bezier(.35, .04, .63, .95) 1;
+
+    fill: rgba(9, 34, 144, 0);
+    animation-fill-mode: forwards;
+}
+
+.mc_title-img svg.svg_anim path.mc-2
+{
+    animation: dash2 1s .3s cubic-bezier(.35, .04, .63, .95) 1;
+
+    animation-fill-mode: forwards;
 }
 
 .about-us
@@ -2374,7 +2389,7 @@ body .trust
 
 .calendar-section
 {
-    padding: 20px 0 0;
+    padding: 20px 0 60px;
 }
 .calendar-section .h-title
 {
@@ -2405,6 +2420,19 @@ body .trust
     .calendar-section .calendly_wrap
     {
         margin: 0 -16px;
+    }
+}
+.calendar-section .calendly_wrap .calendly-inline-widget
+{
+    overflow-y: visible !important;
+
+    height: 850px;
+}
+@media (max-width: 991px)
+{
+    .calendar-section .calendly_wrap .calendly-inline-widget
+    {
+        height: 690px;
     }
 }
 

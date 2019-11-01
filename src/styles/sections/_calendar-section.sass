@@ -1,5 +1,5 @@
 .calendar-section
-  padding: 20px 0 0
+  padding: 20px 0 60px
   .h-title
     font-family: $roboto
     font-weight: $lt
@@ -18,6 +18,11 @@
   .calendly_wrap
     @media(max-width: 576px)
       margin: 0 -16px
+    .calendly-inline-widget
+      overflow-y: visible !important
+      height: 850px
+      @media(max-width: 991px)
+        height: 690px
 
 .cs
   &_title

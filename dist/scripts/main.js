@@ -6,6 +6,7 @@ $(window).on('load', function () {
 	setTimeout(function () {
 		$('.preloader').fadeOut('slow');
 		readyPage();
+		animIconCover();
 	}, 2500);
 });
 
@@ -84,14 +85,26 @@ function addAnimateClass(productAnimate, productCover) {
 
 // Parallax animation end
 
-var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-// var mobDev = false
+// var mobDev = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobDev = false;
 
 function readyPage() {
 	if (!mobDev) {
-		// setTimeout( function () {
 		animateProducts('.main-cover .fade-up', '.main-cover', 0.15, 60, 500, 0.5);
+		// setTimeout( function () {
+
 		// },1000);
+	}
+}
+
+function animIconCover() {
+	var coverIcon = document.querySelector('.mc_title-img');
+
+	if (coverIcon) {
+		setTimeout(function () {
+			addAnimateClass('.mc_title-img .svg_item', '.mc_title-img', 'svg_anim', 0);
+			console.log('done');
+		}, 1000);
 	}
 }
 
