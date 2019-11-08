@@ -1,0 +1,38 @@
+mixin teamList(tl_img, tl_name, tl_position, tl_info)
+    li
+        .row
+            .col-lg-2.col-12
+                .tl_img
+                    if(tl_img)
+                        img(src='images/team/team' + tl_img +'.jpg' alt='img')
+                    else
+
+            .col-lg-3.col-12
+                p.tl_name= tl_name
+                p.tl_position= tl_position
+            .col-lg-7.col-12
+                .tl_info
+                    p.tl_info-text= tl_info
+                    button.tl_btn
+                        span.tl_btn-ico
+                            img(src='images/arrow.svg' alt='arrow')
+                        span.tl_btn-more more
+                        span.tl_btn-less less
+
+section.team-list#section-2
+    .b-container
+        .row.justify-content-center
+            .col-12
+                ul.tl_list
+                    +teamList('1', 'Sean Garrett', 'Co-founder + Managing Partner', 'By implementing big picture thinking, Sean helps companies navigate inflection points and articulate who they are to the world. He was Twitter’s first VP of Communications, growing “the best in-house tech PR team in the business.” Sean also has a deep background in international politics, public affairs, and enterprise technology, driving transformational work for companies like Airbnb, Cisco, Waze, Comcast, Slack, and Greylock Partners.')
+                    +teamList('2', "Brian O'Shaughnessy", 'Co-founder Managing Partner', "A true Bostonian, Brian was the former global head of communications at Skype, director of global corporate communications and public affairs at Google, and communications lead at Verisign, Brian has led innovative storytelling, engagement campaigns, internal communications, strategic communications, and corporate social responsibility.")
+                    +teamList('3', 'Caroline Caswell', 'Partner + Managing Director of Operations', "Focusing on creative business strategy through communications and marketing, brand positioning and identity-based marketing, Caroline’s background is in social media, digital, and consumer marketing. Caroline enjoys ironically and unironically telling people she’s not like a regular mom, she’s a cool mom.")
+                    +teamList('4', 'Ana Braskamp', 'Principal', "Specializing in executive thought leadership,  global communications strategies, and telling stories through tier-one media, Ana makes the technical digestible. She previously led global product and tech communications at Yahoo. Ana is the proud founder of a Burger Club, an avid runner and yogi, and dog mom.")
+                    +teamList('5', 'Erika Gudmundson', 'Principal', "With deep experience in politics, government, non-profits, and tech, Erika specializes in writing for public speaking and executive communications. She previously served as a press secretary on Hillary Clinton’s presidential campaigns, and in communications for The Clinton Global Initiative and the United States Department of the Treasury. A true Aquarius, she volunteers with Team Rubicon in disaster relief areas and takes Halloween very seriously.")
+                    +teamList('6', 'Mary McGee', 'Principal', "Mary has expertise in consumer research and content marketing. She was previously at The Atlantic where she partnered with brands to tell their stories, and led teams of writers, designers, and developers to bring them to life. Her ideal day involves packing sandwiches and going to the beach with Hello Sunshine’s book pick of the month.")
+                    +teamList('7', 'Sarah Sherman', 'Principal', "With deep expertise across digital, video, and written storytelling, Sarah is a creative and strategic hybrid. She built and ran video at The Atlantic's branded content studio and led cross-functional teams in ideation and execution as Associate Creative Director. She has a habit of reading cookbooks cover-to-cover (sometimes with a highlighter in hand) and has a sixth sense for the nearest farmers market.")
+                    +teamList('8', 'Kristen Winzent', 'Principal', "Kristen likes to ask why at least five times and is an expert in bringing stories and experiences to life across mediums. She has deep experience in digital and helping companies map their customer experience across a variety of touchpoints. She has a giant German Shepherd, loves to ski, and is fascinated by composting and waste.")
+                    +teamList('9', 'Salma Abdelfattah', 'Operations Manager', 'Salma is the former Executive coordinator for IASTE, a higher education nonprofit, where she successfully managed an international conference for 200+ professors in Portugal. She is an integral part of the Pramana team, working behind the scenes to ensure that everything is running smoothly and employees are set up for success.')
+                    +teamList('', 'John Chibnall', 'Associate', "John has experience working with a range of companies from global brands to startups and nonprofits. He joined Pramana from Powell Communications; a NY specialty agency focused on clients in the media and digital spaces. John enjoys figure skating, researching lesser-known historical figures, animals you are probably scared of, making people laugh (even if it's at him).")
+                    +teamList('10', 'Rachel Gibian', 'Associate', "Rachel connects big ideas to operational " +
+                    "excellence. She has worked in revenue management, and before that as an internal consultant leading top-line pricing for a $2B business unit. Rachel holds a joint concentration in English and Comparative Religion and given the opportunity, she always attempts to connect her client work to her obsession with apophatic theology. As a Canadian, she’ll apologize for doing this, every time.")

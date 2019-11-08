@@ -151,6 +151,23 @@ $(document).ready( function(){
 	
 	// Smooth anchor scroll end
 	
+	// show/hide text btn start
+	$('.tl_btn').on('click', function(e) {
+		e.preventDefault();
+		
+		let $this = $(this),
+				$parentClass = $('.tl_info'),
+				$parent = $this.parent();
+		
+		if(!$parent.hasClass('active')) {
+			$parentClass.removeClass('active');
+			$parent.addClass('active');
+		} else {
+			$parentClass.removeClass('active');
+		}
+	});
+	// show/hide text btn end
+	
 	// Hamburger menu start
 	
 	$('.hamburger').on('click', function() {

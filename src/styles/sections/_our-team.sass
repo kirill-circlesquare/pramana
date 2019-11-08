@@ -1,0 +1,95 @@
+.team-list
+  padding: 100px 0 0
+  @media(max-width: 1024px)
+    padding: 0 0 125px
+.tl
+  &_list
+    padding: 0
+    margin: 0
+    list-style: none
+    li
+      margin-bottom: 70px
+      &:last-child
+        margin-bottom: 0
+  &_img
+    line-height: 0
+    background: #8991AA
+    max-width: 160px
+    height: 160px
+    @media(max-width: 992px)
+      margin-bottom: 40px
+    @media(max-width: 768px)
+      max-width: 97px
+      height: 97px
+
+    img
+      width: auto
+      height: 100%
+      object-fit: cover
+  &_name
+    font-family: $cutive
+    font-weight: 400
+    font-size: 24px
+    line-height: 45px
+    letter-spacing: 1px
+    margin-bottom: 10px
+  &_position
+    font-family: $roboto
+    font-weight: 300
+    font-size: 20px
+    line-height: 30px
+    @media(max-width: 992px)
+      margin-bottom: 20px
+
+  &_btn
+    position: relative
+    display: none
+    @media(max-width: 576px)
+      display: block
+    &, &:hover, &:focus
+      background: none
+      border: none
+      padding: 0
+      margin: 0
+    &-ico, &-more, &-less
+      display: inline-block
+      vertical-align: middle
+      transition: opacity 300ms ease-out
+      font-family: $roboto
+      font-weight: 500
+    &-ico
+      margin-right: 9px
+      img
+        transition: transform 300ms ease-out
+        width: auto
+        height: 8px
+    &-more
+    &-less
+      position: absolute
+      left: 23px
+      top: 2px
+      opacity: 0
+
+  &_info
+    height: auto
+    &-text
+      display: block
+      transition: all 300ms ease-out
+      @media(max-width: 576px)
+        margin-bottom: 20px
+        max-height: 80px
+        overflow: hidden
+    &.active
+      .tl_info-text
+        @media(max-width: 576px)
+          max-height: 280px
+
+      .tl_btn
+        &-ico
+          img
+            transform: rotate(180deg)
+        &-more
+          opacity: 0
+        &-less
+          opacity: 1
+

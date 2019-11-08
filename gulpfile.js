@@ -16,15 +16,19 @@ let gulp = require('gulp'),
 
 gulp.task('browser-sync', function() {
   browserSync({
-    server: {
-       baseDir: "dist/"
-    }
+	  reloadDelay: 1000,
+	  scrollProportionally: false,
+	  open: false,
+	  ui: false,
+	  server: {
+		  baseDir: "dist/"
+	  }
   });
 });
 
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-});
+// gulp.task('bs-reload', function () {
+//   browserSync.reload();
+// });
 
 gulp.task('images', function(){
   gulp.src('src/images/**/*')
@@ -40,6 +44,7 @@ gulp.task('html', function(){
 			this.emit('end');
   }}))
 	.pipe(pug())
+	.pipe(plumber.stop())
 	.pipe(prettyHtml())
 	.pipe(gulp.dest('dist/'))
   .pipe(browserSync.reload({stream:true}))
@@ -53,6 +58,7 @@ gulp.task('styles', function(){
         this.emit('end');
     }}))
     .pipe(sass())
+    .pipe(plumber.stop())
     .pipe(csscomb())
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('dist/styles/'))
@@ -71,6 +77,7 @@ gulp.task('scripts', function(){
     }}))
     .pipe(concat('main.js', {newLine: ';'}))
     .pipe(babel())
+    .pipe(plumber.stop())
     .pipe(gulp.dest('dist/scripts/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
@@ -86,5 +93,5 @@ gulp.task('default', ['browser-sync'], function(){
 	gulp.watch("src/images/**/*", ['images']);
   gulp.watch("src/styles/**/*.sass", ['styles']);
   gulp.watch("src/scripts/**/*.js", ['scripts']);
-  gulp.watch("*.html", ['bs-reload']);
+  // gulp.watch("*.html", ['bs-reload']);
 });
