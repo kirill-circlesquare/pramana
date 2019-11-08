@@ -2466,13 +2466,13 @@ body .trust
     }
 }
 
+.tl_list
+{
+    margin-bottom: -70px;
+}
 .tl_list-item
 {
     margin-bottom: 70px;
-}
-.tl_list-item:last-child
-{
-    margin-bottom: 0;
 }
 
 .tl_img
