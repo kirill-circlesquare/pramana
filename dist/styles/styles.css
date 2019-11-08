@@ -2466,18 +2466,11 @@ body .trust
     }
 }
 
-.tl_list
-{
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-}
-.tl_list li
+.tl_list-item
 {
     margin-bottom: 70px;
 }
-.tl_list li:last-child
+.tl_list-item:last-child
 {
     margin-bottom: 0;
 }

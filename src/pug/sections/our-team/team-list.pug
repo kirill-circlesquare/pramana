@@ -1,5 +1,5 @@
 mixin teamList(tl_img, tl_name, tl_position, tl_info)
-    li
+    .tl_list-item
         .row
             .col-lg-2.col-12
                 .tl_img
@@ -23,7 +23,7 @@ section.team-list#section-2
     .b-container
         .row.justify-content-center
             .col-12
-                ul.tl_list
+                .tl_list
                     +teamList('1', 'Sean Garrett', 'Co-founder + Managing Partner', 'By implementing big picture thinking, Sean helps companies navigate inflection points and articulate who they are to the world. He was Twitter’s first VP of Communications, growing “the best in-house tech PR team in the business.” Sean also has a deep background in international politics, public affairs, and enterprise technology, driving transformational work for companies like Airbnb, Cisco, Waze, Comcast, Slack, and Greylock Partners.')
                     +teamList('2', "Brian O'Shaughnessy", 'Co-founder Managing Partner', "A true Bostonian, Brian was the former global head of communications at Skype, director of global corporate communications and public affairs at Google, and communications lead at Verisign, Brian has led innovative storytelling, engagement campaigns, internal communications, strategic communications, and corporate social responsibility.")
                     +teamList('3', 'Caroline Caswell', 'Partner + Managing Director of Operations', "Focusing on creative business strategy through communications and marketing, brand positioning and identity-based marketing, Caroline’s background is in social media, digital, and consumer marketing. Caroline enjoys ironically and unironically telling people she’s not like a regular mom, she’s a cool mom.")
