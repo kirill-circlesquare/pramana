@@ -120,6 +120,10 @@ $(document).ready( function(){
 	
 		addAnimateClass('.solutions .svg_item','.solutions');
 		
+		addAnimateClass('.fresh-start .svg_item','.fresh-start');
+		addAnimateClass('.next-chapter .svg_item','.next-chapter');
+		addAnimateClass('.new-direction .svg_item','.new-direction');
+		
 		// Animations for list with svg icons start
 		
 		var info_steps = document.querySelector('.info-steps');
@@ -138,6 +142,40 @@ $(document).ready( function(){
 	}
 	
 	// Animation just for web end
+	
+	// Slider start
+	
+	$('.fs_slider').slick({
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 7000,
+		// adaptiveHeight: true,
+		focusOnSelect: true,
+		prevArrow: '.fs_slider-prev',
+		nextArrow: '.fs_slider-next',
+	});
+	
+	$('.nc_slider').slick({
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 7500,
+		// adaptiveHeight: true,
+		focusOnSelect: true,
+		prevArrow: '.nc_slider-prev',
+		nextArrow: '.nc_slider-next',
+	});
+	
+	$('.nd_slider').slick({
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 8000,
+		// adaptiveHeight: true,
+		focusOnSelect: true,
+		prevArrow: '.nd_slider-prev',
+		nextArrow: '.nd_slider-next',
+	});
+	
+	// Slider end
 	
 	// Smooth anchor scroll start
 	

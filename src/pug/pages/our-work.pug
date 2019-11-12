@@ -1,8 +1,32 @@
 block menuLinks
     - var menu1
-    - var menu2
-    - var menu3 = 'active'
+    - var menu2 = 'active'
+    - var menu3
     - var menu4
+
+mixin owList(ow_title1, ow_info1, ow_title2, ow_info2, ow_title3, ow_info3, ow_title4, ow_info4)
+    .ow_item.mn_slide
+        ul
+            li
+                .ow_item-title
+                    p= ow_title1
+                .ow_item-info
+                    p= ow_info1
+            li
+                .ow_item-title
+                    p= ow_title2
+                .ow_item-info
+                    p= ow_info2
+            li
+                .ow_item-title
+                    p= ow_title3
+                .ow_item-info
+                    p= ow_info3
+            li
+                .ow_item-title
+                    p= ow_title4
+                .ow_item-info
+                    p= ow_info4
 
 doctype html
 html
@@ -29,10 +53,12 @@ html
         main
             include ../sections/main/header
 
-            include ../sections/our-team/screen-dots
-            include ../sections/our-team/main-cover
-            include ../sections/our-team/team-list
-            include ../sections/our-team/cta
+            include ../sections/our-work/screen-dots
+            include ../sections/our-work/main-cover
+            include ../sections/our-work/fresh-start
+            include ../sections/our-work/next-chapter
+            include ../sections/our-work/new-direction
+            include ../sections/our-work/cta
 
             include ../sections/main/footer
 
@@ -42,5 +68,5 @@ html
         script(src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.min.js')
 
         //script(src='scripts/jquery.lettering.js')
-        //script(src='scripts/slick.min.js')
+        script(src='scripts/slick.min.js')
         script(src='scripts/main.min.js')

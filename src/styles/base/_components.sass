@@ -149,6 +149,64 @@ svg.svg_animation
       color: $yellow
 
 
+.mn
+  &_slider
+  &_slide
+    ul
+      display: block
+      margin: 0
+      padding: 0
+      list-style: none
+      li
+
+.slider_nav
+  position: absolute
+  z-index: 2
+  top: 50%
+  transform: translateY(-50%)
+  left: 0
+  right: 0
+  height: 36px
+  //@media(max-width: 820px)
+  //  display: none
+  &-prev, &-next
+    position: absolute
+    top: 0
+    width: 36px
+    height: 36px
+    border-radius: 100%
+    background: $yellow
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: opacity 300ms ease-out
+    img
+      width: auto
+      height: 14px
+    &.slick-disabled
+      opacity: 0.2
+      pointer-events: none
+
+  &-prev
+    left: 0
+    @media(max-width: 992px)
+      left: 20px
+    @media(max-width: 768px)
+      left: 60px
+    @media(max-width: 576px)
+      left: 0px
+
+  &-next
+    right: 0
+    @media(max-width: 992px)
+      right: 20px
+    @media(max-width: 768px)
+      right: 60px
+    @media(max-width: 576px)
+      right: 0px
+
+
 .slider-dots
   position: fixed
   top: 0
