@@ -151,6 +151,7 @@ svg.svg_animation
 
 .mn
   &_slider
+    margin-bottom: 60px
   &_slide
     ul
       display: block
@@ -192,20 +193,49 @@ svg.svg_animation
     left: 0
     @media(max-width: 992px)
       left: 20px
-    @media(max-width: 768px)
+    @media(max-width: 769px)
       left: 60px
-    @media(max-width: 576px)
+    @media(max-width: 767px)
       left: 0px
 
   &-next
     right: 0
     @media(max-width: 992px)
       right: 20px
-    @media(max-width: 768px)
+    @media(max-width: 769px)
       right: 60px
-    @media(max-width: 576px)
+    @media(max-width: 767px)
       right: 0px
 
+
+.slider-num, .nd-num, .nc-num
+  position: absolute
+  left: 0
+  right: 0
+  bottom: -60px
+  list-style: none
+  padding: 0
+  margin: 0 auto
+  text-align: center
+  li
+    display: inline-block
+    button
+      background: none
+      border: none
+      cursor: pointer
+      flex: 0 1 auto
+      font-family: $cutive
+      font-size: 15px
+      line-height: 15px
+      color: #8991AA
+      text-decoration: none
+      opacity: 0.5
+      transition: color 300ms ease-in-out
+      outline: none
+
+    &.slick-active
+      button
+        color: $main
 
 .slider-dots
   position: fixed

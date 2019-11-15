@@ -5,14 +5,14 @@
     @media(max-width: 768px)
       padding: 27px 10px 70px 25px
     &-wrap
-      padding: 60px 0
+      padding: 60px 0 60px
       @media(max-width: 768px)
-        padding: 50px 0
+        padding: 50px 0 10px
         margin-left: 10px
         margin-right: 10px
       &.fresh-start
-        @media(min-width: 769px)
-          margin-top: 60px
+        //@media(min-width: 769px)
+        //  margin-top: 60px
   &_item
     &-title, &-info
       & *
@@ -47,13 +47,21 @@
       display: inline-block
       position: relative
       height: 69px
-      margin-bottom: 26px
+      margin-bottom: 36px
+      .cc
+        transform: scale(0.9)
+      .c1
+        width: 19px
       &.active
         span
           background: #092290
     &-title
       .h4-title
         font-family: $cutive
+        font-size: 24px
+        font-weight: $rg
+        line-height: 45px
+        letter-spacing: 1.03px
         text-align: center
       &-wrap
         text-align: center
