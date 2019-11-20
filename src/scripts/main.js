@@ -96,7 +96,6 @@ function animIconCover() {
 	if(coverIcon) {
 		setTimeout( function () {
 			addAnimateClass('.mc_title-img .svg_item','.mc_title-img', 'svg_anim', 0);
-			console.log('done')
 		},1000);
 	}
 }
