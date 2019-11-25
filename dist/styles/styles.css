@@ -834,7 +834,7 @@ svg.svg_animation path:last-child
 {
     font-family: 'Cutive', serif;
     font-size: 15px;
-    line-height: 15px;
+    line-height: 20px;
 
     cursor: pointer;
     transition: color 300ms ease-in-out;
